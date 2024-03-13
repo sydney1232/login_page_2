@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:login_page_2/widget/DarkBlueButton.dart';
+import 'package:login_page_2/widget/UserPass.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -77,48 +79,9 @@ class _LoginePageState extends State<LoginePage> {
 
                 SizedBox(height: 40),
 
-                //
-                Container(
-                  padding: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Color.fromRGBO(196, 135, 198, .4),
-                          blurRadius: 20,
-                          offset: Offset(0, 10))
-                    ],
-                  ),
-                  child: Column(
-                    children: [
-                      Container(
-                        padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                            border: Border(
-                                bottom: BorderSide(
-                          color: Colors.grey.shade300,
-                        ))),
-                        child: TextField(
-                          decoration: InputDecoration(
-                              border: InputBorder.none,
-                              hintText: "Username",
-                              hintStyle: TextStyle(color: Colors.grey)),
-                        ),
-                      ),
-                      Container(
-                        padding: EdgeInsets.all(10),
-                        child: TextField(
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            hintText: "Password",
-                            hintStyle: TextStyle(color: Colors.grey),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                //UserPass Textfield
+                UserPass(userHint: "Username", passwordHint: "Password"),
+
                 SizedBox(height: 20),
 
                 //Forgot Password Text
@@ -132,20 +95,8 @@ class _LoginePageState extends State<LoginePage> {
                 SizedBox(height: 30),
 
                 //Login Button
-                Container(
-                  height: 50,
-                  margin: EdgeInsets.symmetric(horizontal: 50),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    color: Color.fromRGBO(49, 39, 79, 1),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Login",
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
-                ),
+                DarkBlueButton(text: "Login"),
+
                 SizedBox(height: 30),
 
                 //Create Account
